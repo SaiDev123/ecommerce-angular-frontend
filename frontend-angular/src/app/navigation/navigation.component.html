@@ -4,15 +4,31 @@
     <li class="nav-item">
      <a class="nav-link" routerLink="/">Home</a>
     </li>
-      <li class="nav-item">
-        <a class="nav-link" routerLink="/login">Login</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" routerLink="/register">Register</a>
-      </li>
-      <li class="nav-item">
-      <a class="nav-link" routerLink="/careers">Careers</a>
-    </li>
+         <!-- <li *ngIf="!isUserLoggedIn" class="nav-item">
+            <a class="nav-link" routerLink="/login">Login</a>
+          </li>
+          <li  *ngIf="!isUserLoggedIn" class="nav-item">
+            <a class="nav-link" routerLink="/register">Register</a>
+          </li>
+          <li  *ngIf="!isUserLoggedIn" class="nav-item">
+          <a class="nav-link" routerLink="/careers">Careers</a>
+        </li>
+        <li  *ngIf="isUserLoggedIn" class="nav-item">
+            <a class="nav-link" routerLink="/logout">Logout</a>
+          </li> -->
+          <li *ngIf="!userService.isLoggedIn()" class="nav-item">
+              <a class="nav-link" routerLink="/login">Login</a>
+            </li>
+            <li  *ngIf="!userService.isLoggedIn()" class="nav-item">
+              <a class="nav-link" routerLink="/register">Register</a>
+            </li>
+            <li  *ngIf="!userService.isLoggedIn()" class="nav-item">
+            <a class="nav-link" routerLink="/careers">Careers</a>
+          </li>
+          <li  *ngIf="userService.isLoggedIn()" class="nav-item">
+              <a class="nav-link" routerLink="/logout">Logout</a>
+          </li>
+  
     <li class="nav-item">
     <form class="form-inline">
         <input class="form-control mr-sm-2" type="text" placeholder="Search">

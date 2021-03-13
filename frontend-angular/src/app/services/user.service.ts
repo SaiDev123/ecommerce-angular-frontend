@@ -13,9 +13,23 @@ export class UserService {
   constructor(private httpClient:HttpClient) { }
 
    registerUser(user:any){
-
    return this.httpClient.post(`${this.BASE_URL}register`,user);
+   }
+
+   loginAUser(user:any){
+
+    return this.httpClient.post(`${this.BASE_URL}login`,user);
 
    }
+
+   isLoggedIn(){
+     if(localStorage.getItem('token') == null){
+       return false;
+     }
+     else
+     {
+       return true;
+     }
+  }
 
 }

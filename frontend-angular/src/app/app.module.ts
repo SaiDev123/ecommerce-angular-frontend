@@ -11,6 +11,8 @@ import { NavigationComponent } from './navigation/navigation.component';
 import { HomeComponent } from './home/home.component';
 import {ReactiveFormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
+import { UserdashboardComponent } from './userdashboard/userdashboard.component';
+import { LogoutComponent } from './logout/logout.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import {HttpClientModule} from '@angular/common/http';
     CareersComponent,
     ContactusComponent,
     NavigationComponent,
-    HomeComponent
+    HomeComponent,
+    UserdashboardComponent,
+    LogoutComponent
   ],
   imports: [
   BrowserModule,
