@@ -7,6 +7,7 @@ import { CareersComponent } from './careers/careers.component';
 import { UserdashboardComponent } from './userdashboard/userdashboard.component';
 import { LogoutComponent } from './logout/logout.component';
 import { AuthGuard } from './auth.guard';
+import { ChangepasswordComponent } from './changepassword/changepassword.component';
 
 const routes: Routes = [
   {
@@ -32,7 +33,13 @@ const routes: Routes = [
   },
   {
     path:'logout',
-    component:LogoutComponent
+    component:LogoutComponent,
+    canActivate:[AuthGuard]
+  },
+  {
+    path:'changepwd',
+    component:ChangepasswordComponent,
+    canActivate:[AuthGuard]
   }
 ];
 @NgModule({

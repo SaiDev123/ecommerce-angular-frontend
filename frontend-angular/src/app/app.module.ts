@@ -13,6 +13,7 @@ import {ReactiveFormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import { UserdashboardComponent } from './userdashboard/userdashboard.component';
 import { LogoutComponent } from './logout/logout.component';
+import { ChangepasswordComponent } from './changepassword/changepassword.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { LogoutComponent } from './logout/logout.component';
     NavigationComponent,
     HomeComponent,
     UserdashboardComponent,
-    LogoutComponent
+    LogoutComponent,
+    ChangepasswordComponent
   ],
   imports: [
   BrowserModule,

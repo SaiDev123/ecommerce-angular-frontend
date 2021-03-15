@@ -26,6 +26,9 @@
             <a class="nav-link" routerLink="/careers">Careers</a>
           </li>
           <li  *ngIf="userService.isLoggedIn()" class="nav-item">
+              <a class="nav-link" routerLink="/changepwd">change password</a>
+          </li>
+          <li  *ngIf="userService.isLoggedIn()" class="nav-item">
               <a class="nav-link" routerLink="/logout">Logout</a>
           </li>
   
