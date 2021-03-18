@@ -29,15 +29,13 @@ export class UserService {
    changePassword(user:any){
 
      //this.headers.set('authorization',`bearer ${localStorage.getItem('token')}`);
-
-        return this.httpClient.post(`${this.BASE_URL}changePassword`,user,
-       {   headers: {
-            Authorization: `Bearer ${localStorage.getItem('token')} ` 
-          }
-        }
-        );
+        return this.httpClient.post(`${this.BASE_URL}changePassword`,user);
 
    }
+
+    getToken(){
+      return localStorage.getItem('token');
+    }
 
    isLoggedIn(){
      if(localStorage.getItem('token') == null){

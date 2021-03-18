@@ -18,8 +18,8 @@ export class ChangepasswordComponent implements OnInit {
   
      let details= {
          emailId: 'itsme.vikranth521@gmail.com',
-         currentPassword: 'chvikranth',
-         newPassword: 'changedpwd'
+         currentPassword: 'changedpwd',
+         newPassword: 'somepassword'
      }
 
      this.userService.changePassword(details).subscribe(
